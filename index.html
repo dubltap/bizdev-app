@@ -3,46 +3,1802 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pro Business Development - Coming Soon | dubltap.io</title>
-  <meta name="description" content="AI-powered sales strategy generator. Close more deals with personalized pitch decks and competitive positioning.">
+  <title>Pro Business Development — AI-Powered Revenue Engine | dubltap.io</title>
+  <meta name="description" content="Sales scripts, negotiation tactics, marketing strategy, and revenue playbooks in seconds. AI that closes deals. Free to start.">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Pro Business Development | AI-Powered Revenue Engine">
+  <meta property="og:description" content="Sales scripts, negotiation tactics, marketing strategy, and revenue playbooks in seconds. Free to start.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://bizdev.dubltap.io">
+  
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Pro Business Development | AI-Powered Revenue Engine">
+  <meta name="twitter:description" content="Sales scripts, negotiation tactics, marketing strategy, and revenue playbooks in seconds.">
+  
+  <meta name="theme-color" content="#264653">
+  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  
   <style>
-    :root{--sunset-gold:#F4A261;--sunset-coral:#E76F51;--ocean-deep:#264653;--ocean-teal:#2A9D8F;--sand-light:#FDF8F3;--sand-dark:#4A4238}
-    *{margin:0;padding:0;box-sizing:border-box}
-    body{font-family:'DM Sans',sans-serif;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--sand-light),#fff);color:var(--sand-dark);text-align:center;padding:2rem}
-    .container{max-width:600px}
-    .logo{font-family:'Outfit',sans-serif;font-size:1.5rem;font-weight:700;color:var(--ocean-deep);margin-bottom:3rem}
-    .logo span{color:var(--sunset-gold)}
-    .icon{font-size:5rem;margin-bottom:1.5rem}
-    h1{font-family:'Outfit',sans-serif;font-size:3rem;font-weight:800;color:var(--ocean-deep);margin-bottom:1rem}
-    h1 span{background:linear-gradient(135deg,var(--sunset-gold),var(--sunset-coral));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-    .tagline{font-size:1.25rem;color:var(--sand-dark);margin-bottom:2rem;line-height:1.6}
-    .email-form{display:flex;gap:0.75rem;max-width:400px;margin:0 auto 1.5rem}
-    .email-form input{flex:1;padding:1rem 1.25rem;border:2px solid #e0d6cc;border-radius:12px;font-size:1rem;outline:none;transition:border-color 0.2s}
-    .email-form input:focus{border-color:var(--ocean-teal)}
-    .email-form button{padding:1rem 1.5rem;background:linear-gradient(135deg,var(--sunset-gold),var(--sunset-coral));color:var(--ocean-deep);border:none;border-radius:12px;font-weight:600;cursor:pointer;transition:all 0.2s}
-    .email-form button:hover{transform:translateY(-2px);box-shadow:0 4px 20px rgba(244,162,97,0.4)}
-    .note{font-size:0.875rem;color:#999;margin-bottom:3rem}
-    .back-link{color:var(--ocean-teal);text-decoration:none;font-weight:500}
-    .back-link:hover{color:var(--sunset-coral)}
-    @media(max-width:480px){h1{font-size:2rem}.email-form{flex-direction:column}}
+    /* ═══════════════════════════════════════════════════════════════
+       PRO BUSINESS DEVELOPMENT — DESIGN SYSTEM
+       dubltap.io Monetization Hub | Golden Ratio (φ = 1.618)
+       ═══════════════════════════════════════════════════════════════ */
+    
+    :root {
+      /* SoCal Sunset */
+      --sunset-gold: #F4A261;
+      --sunset-coral: #E76F51;
+      --sunset-peach: #FFBE98;
+      
+      /* Ocean */
+      --ocean-deep: #264653;
+      --ocean-teal: #2A9D8F;
+      --ocean-foam: #A8DADC;
+      
+      /* Sand */
+      --sand-light: #FDF8F3;
+      --sand-warm: #E9E0D6;
+      --sand-medium: #C4B7A6;
+      --sand-dark: #4A4238;
+      
+      /* ProBizDev Accent — Strategic Amber */
+      --biz-amber: #D4870E;
+      --biz-amber-light: #F0B429;
+      --biz-amber-glow: rgba(212, 135, 14, 0.12);
+      --biz-dark: #1B2A3D;
+      
+      /* Golden Ratio Spacing */
+      --phi-xs: 0.382rem;
+      --phi-sm: 0.618rem;
+      --phi-md: 1rem;
+      --phi-lg: 1.618rem;
+      --phi-xl: 2.618rem;
+      --phi-2xl: 4.236rem;
+      --phi-3xl: 6.854rem;
+      
+      /* Typography */
+      --font-display: 'Outfit', system-ui, sans-serif;
+      --font-body: 'DM Sans', system-ui, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+    
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    body {
+      font-family: var(--font-body);
+      background: var(--sand-light);
+      color: var(--sand-dark);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+    
+    /* ═══ Ambient Background ═══ */
+    .bg-ambient {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      background: 
+        radial-gradient(ellipse 80% 50% at 20% 40%, rgba(212, 135, 14, 0.06) 0%, transparent 70%),
+        radial-gradient(ellipse 60% 60% at 80% 20%, rgba(244, 162, 97, 0.08) 0%, transparent 60%),
+        radial-gradient(ellipse 50% 40% at 50% 90%, rgba(42, 157, 143, 0.05) 0%, transparent 50%);
+    }
+    
+    .bg-ambient::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+      opacity: 0.4;
+    }
+    
+    /* ═══ Header ═══ */
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: rgba(253, 248, 243, 0.92);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--ocean-foam);
+      padding: 0.75rem 1.25rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .logo-group {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+    }
+    
+    .logo-icon {
+      width: 36px;
+      height: 36px;
+      background: linear-gradient(135deg, var(--biz-amber), var(--sunset-gold));
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      box-shadow: 0 2px 8px rgba(212, 135, 14, 0.25);
+    }
+    
+    .logo-text {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--ocean-deep);
+      line-height: 1.1;
+    }
+    
+    .logo-sub {
+      font-family: var(--font-body);
+      font-size: 0.6rem;
+      color: var(--sand-medium);
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+    
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: var(--phi-md);
+    }
+    
+    .usage-badge {
+      font-size: 0.75rem;
+      color: var(--sand-dark);
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    
+    .usage-bar {
+      width: 60px;
+      height: 4px;
+      background: var(--sand-warm);
+      border-radius: 2px;
+      overflow: hidden;
+    }
+    
+    .usage-fill {
+      height: 100%;
+      background: var(--ocean-teal);
+      border-radius: 2px;
+      transition: width 0.4s ease;
+    }
+    
+    .usage-fill.low { background: var(--sunset-coral); }
+    
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 0.85rem;
+      border: none;
+      border-radius: var(--phi-sm);
+      cursor: pointer;
+      transition: all 0.2s ease;
+      text-decoration: none;
+    }
+    
+    .btn:hover { transform: translateY(-1px); }
+    .btn:active { transform: translateY(0); }
+    
+    .btn-primary {
+      background: linear-gradient(135deg, var(--sunset-gold), var(--sunset-coral));
+      color: white;
+      padding: var(--phi-sm) var(--phi-lg);
+      box-shadow: 0 2px 10px rgba(244, 162, 97, 0.3);
+    }
+    
+    .btn-primary:hover {
+      box-shadow: 0 4px 16px rgba(244, 162, 97, 0.45);
+    }
+    
+    .btn-secondary {
+      background: transparent;
+      color: var(--ocean-deep);
+      padding: var(--phi-sm) var(--phi-lg);
+      border: 1px solid var(--ocean-foam);
+    }
+    
+    .btn-secondary:hover {
+      background: var(--sand-warm);
+    }
+    
+    .btn-biz {
+      background: linear-gradient(135deg, var(--biz-amber), var(--biz-amber-light));
+      color: white;
+      padding: var(--phi-sm) var(--phi-lg);
+      box-shadow: 0 2px 10px rgba(212, 135, 14, 0.3);
+    }
+    
+    .btn-biz:hover {
+      box-shadow: 0 4px 16px rgba(212, 135, 14, 0.45);
+    }
+    
+    .btn-lg {
+      padding: 0.85rem var(--phi-xl);
+      font-size: 0.95rem;
+      border-radius: var(--phi-md);
+    }
+    
+    .btn-sm {
+      padding: 0.35rem 0.75rem;
+      font-size: 0.75rem;
+    }
+    
+    /* ═══ Main Content ═══ */
+    .main {
+      position: relative;
+      z-index: 1;
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 5rem 1.25rem 3rem;
+    }
+    
+    /* ═══ Hero ═══ */
+    .hero {
+      text-align: center;
+      padding: var(--phi-2xl) 0 var(--phi-xl);
+    }
+    
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: var(--biz-amber-glow);
+      border: 1px solid rgba(212, 135, 14, 0.2);
+      border-radius: 999px;
+      padding: 0.35rem 0.85rem;
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--biz-amber);
+      margin-bottom: var(--phi-md);
+      letter-spacing: 0.3px;
+    }
+    
+    .hero h1 {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: clamp(1.8rem, 5vw, 2.8rem);
+      line-height: 1.1;
+      color: var(--ocean-deep);
+      margin-bottom: var(--phi-sm);
+    }
+    
+    .hero h1 span {
+      background: linear-gradient(135deg, var(--biz-amber), var(--sunset-coral));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .hero p {
+      font-size: 1.05rem;
+      color: var(--sand-dark);
+      opacity: 0.8;
+      max-width: 480px;
+      margin: 0 auto var(--phi-lg);
+      line-height: 1.5;
+    }
+    
+    /* ═══ Stats Bar ═══ */
+    .stats-bar {
+      display: flex;
+      justify-content: center;
+      gap: var(--phi-xl);
+      flex-wrap: wrap;
+      margin-bottom: var(--phi-xl);
+    }
+    
+    .stat {
+      text-align: center;
+    }
+    
+    .stat-value {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 1.4rem;
+      color: var(--biz-amber);
+    }
+    
+    .stat-label {
+      font-size: 0.7rem;
+      color: var(--sand-medium);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-top: 0.15rem;
+    }
+    
+    /* ═══ Type Selector ═══ */
+    .type-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+      gap: 0.5rem;
+      margin-bottom: var(--phi-lg);
+    }
+    
+    .type-card {
+      padding: 0.85rem 0.5rem;
+      background: white;
+      border: 1.5px solid var(--ocean-foam);
+      border-radius: var(--phi-sm);
+      cursor: pointer;
+      text-align: center;
+      transition: all 0.25s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .type-card:hover {
+      border-color: var(--biz-amber-light);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(212, 135, 14, 0.1);
+    }
+    
+    .type-card.active {
+      background: linear-gradient(135deg, var(--biz-amber), var(--biz-amber-light));
+      border-color: var(--biz-amber);
+      box-shadow: 0 4px 16px rgba(212, 135, 14, 0.3);
+    }
+    
+    .type-card.active .type-icon,
+    .type-card.active .type-name {
+      color: white;
+    }
+    
+    .type-icon {
+      font-size: 1.3rem;
+      margin-bottom: 0.3rem;
+    }
+    
+    .type-name {
+      font-family: var(--font-display);
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--ocean-deep);
+    }
+    
+    /* ═══ Input Area ═══ */
+    .input-section {
+      background: white;
+      border: 1px solid var(--ocean-foam);
+      border-radius: var(--phi-md);
+      padding: var(--phi-lg);
+      margin-bottom: var(--phi-lg);
+      box-shadow: 0 2px 12px rgba(38, 70, 83, 0.04);
+    }
+    
+    .input-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: var(--phi-sm);
+    }
+    
+    .input-label {
+      font-family: var(--font-display);
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--ocean-deep);
+    }
+    
+    .input-example {
+      font-size: 0.72rem;
+      color: var(--biz-amber);
+      cursor: pointer;
+      font-weight: 600;
+      border: none;
+      background: none;
+      transition: color 0.2s;
+    }
+    
+    .input-example:hover { color: var(--sunset-coral); }
+    
+    .prompt-textarea {
+      width: 100%;
+      min-height: 110px;
+      background: var(--sand-light);
+      border: 1px solid var(--ocean-foam);
+      border-radius: var(--phi-sm);
+      padding: var(--phi-md);
+      font-family: var(--font-body);
+      font-size: 0.9rem;
+      color: var(--sand-dark);
+      resize: vertical;
+      outline: none;
+      transition: border-color 0.2s;
+      line-height: 1.5;
+    }
+    
+    .prompt-textarea::placeholder {
+      color: var(--sand-medium);
+    }
+    
+    .prompt-textarea:focus {
+      border-color: var(--biz-amber-light);
+      box-shadow: 0 0 0 3px var(--biz-amber-glow);
+    }
+    
+    .generate-btn {
+      width: 100%;
+      margin-top: var(--phi-sm);
+      padding: 0.85rem;
+      background: linear-gradient(135deg, var(--biz-amber), var(--sunset-gold));
+      color: white;
+      font-family: var(--font-display);
+      font-size: 0.95rem;
+      font-weight: 700;
+      border: none;
+      border-radius: var(--phi-sm);
+      cursor: pointer;
+      transition: all 0.25s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      box-shadow: 0 3px 12px rgba(212, 135, 14, 0.3);
+    }
+    
+    .generate-btn:hover:not(:disabled) {
+      box-shadow: 0 6px 20px rgba(212, 135, 14, 0.45);
+      transform: translateY(-1px);
+    }
+    
+    .generate-btn:disabled {
+      opacity: 0.7;
+      cursor: wait;
+    }
+    
+    /* ═══ Loading State ═══ */
+    .loading-state {
+      display: none;
+      text-align: center;
+      padding: var(--phi-2xl) var(--phi-md);
+    }
+    
+    .loading-state.active { display: block; }
+    
+    .spinner {
+      width: 40px;
+      height: 40px;
+      border: 3px solid var(--sand-warm);
+      border-top-color: var(--biz-amber);
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+      margin: 0 auto var(--phi-md);
+    }
+    
+    @keyframes spin { to { transform: rotate(360deg); } }
+    
+    .loading-text {
+      font-family: var(--font-display);
+      font-weight: 600;
+      color: var(--ocean-deep);
+      font-size: 0.95rem;
+    }
+    
+    .loading-sub {
+      font-size: 0.78rem;
+      color: var(--sand-medium);
+      margin-top: 0.3rem;
+    }
+    
+    /* ═══ Output Area ═══ */
+    .output-section {
+      display: none;
+      background: white;
+      border: 1.5px solid rgba(212, 135, 14, 0.2);
+      border-radius: var(--phi-md);
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(212, 135, 14, 0.08);
+      margin-bottom: var(--phi-lg);
+    }
+    
+    .output-section.active { display: block; }
+    
+    .output-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: var(--phi-sm) var(--phi-lg);
+      background: var(--biz-amber-glow);
+      border-bottom: 1px solid rgba(212, 135, 14, 0.12);
+    }
+    
+    .output-label {
+      font-family: var(--font-display);
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--biz-amber);
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    
+    .copy-btn {
+      padding: 0.3rem 0.7rem;
+      font-size: 0.72rem;
+      font-weight: 600;
+      background: white;
+      border: 1px solid var(--ocean-foam);
+      border-radius: 6px;
+      color: var(--sand-dark);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    
+    .copy-btn:hover {
+      background: var(--sand-warm);
+    }
+    
+    .copy-btn.copied {
+      background: var(--ocean-teal);
+      color: white;
+      border-color: var(--ocean-teal);
+    }
+    
+    .output-body {
+      padding: var(--phi-lg);
+      max-height: 500px;
+      overflow-y: auto;
+      line-height: 1.7;
+      font-size: 0.88rem;
+    }
+    
+    /* Markdown rendering */
+    .output-body h2 {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--ocean-deep);
+      margin: var(--phi-lg) 0 var(--phi-sm);
+      padding-bottom: 0.4rem;
+      border-bottom: 2px solid var(--biz-amber-glow);
+    }
+    
+    .output-body h2:first-child { margin-top: 0; }
+    
+    .output-body h3 {
+      font-family: var(--font-display);
+      font-size: 0.98rem;
+      font-weight: 700;
+      color: var(--biz-amber);
+      margin: var(--phi-md) 0 var(--phi-xs);
+    }
+    
+    .output-body p {
+      margin-bottom: var(--phi-sm);
+    }
+    
+    .output-body strong {
+      color: var(--ocean-deep);
+      font-weight: 600;
+    }
+    
+    .output-body em {
+      color: var(--sand-medium);
+    }
+    
+    .output-body ul, .output-body ol {
+      margin: var(--phi-xs) 0 var(--phi-sm) var(--phi-lg);
+    }
+    
+    .output-body li {
+      margin-bottom: 0.3rem;
+    }
+    
+    .output-body table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: var(--phi-sm) 0;
+      font-size: 0.82rem;
+    }
+    
+    .output-body th {
+      background: var(--biz-amber-glow);
+      color: var(--ocean-deep);
+      font-weight: 600;
+      text-align: left;
+      padding: 0.5rem 0.75rem;
+      border: 1px solid var(--ocean-foam);
+    }
+    
+    .output-body td {
+      padding: 0.45rem 0.75rem;
+      border: 1px solid var(--ocean-foam);
+    }
+    
+    .output-body tr:hover td {
+      background: rgba(212, 135, 14, 0.04);
+    }
+    
+    .output-body hr {
+      border: none;
+      border-top: 1px solid var(--ocean-foam);
+      margin: var(--phi-md) 0;
+    }
+    
+    .output-body code {
+      font-family: var(--font-mono);
+      font-size: 0.82em;
+      background: var(--sand-warm);
+      padding: 0.15rem 0.4rem;
+      border-radius: 4px;
+    }
+    
+    .output-body pre {
+      background: var(--ocean-deep);
+      color: var(--ocean-foam);
+      padding: var(--phi-md);
+      border-radius: var(--phi-sm);
+      overflow-x: auto;
+      margin: var(--phi-sm) 0;
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      line-height: 1.6;
+    }
+    
+    .output-body pre code {
+      background: none;
+      padding: 0;
+      color: inherit;
+    }
+    
+    .output-body blockquote {
+      border-left: 3px solid var(--biz-amber);
+      padding-left: var(--phi-md);
+      margin: var(--phi-sm) 0;
+      color: var(--sand-dark);
+      font-style: italic;
+    }
+    
+    /* ═══ Cross-Sell Banner ═══ */
+    .cross-sell {
+      display: none;
+      background: linear-gradient(135deg, rgba(42, 157, 143, 0.08), rgba(244, 162, 97, 0.08));
+      border: 1px solid var(--ocean-foam);
+      border-radius: var(--phi-md);
+      padding: var(--phi-md) var(--phi-lg);
+      margin-bottom: var(--phi-lg);
+      gap: var(--phi-md);
+      align-items: center;
+    }
+    
+    .cross-sell.active { display: flex; }
+    
+    .cross-sell-icon {
+      font-size: 1.5rem;
+      flex-shrink: 0;
+    }
+    
+    .cross-sell-text {
+      flex: 1;
+    }
+    
+    .cross-sell-title {
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: 0.85rem;
+      color: var(--ocean-deep);
+    }
+    
+    .cross-sell-desc {
+      font-size: 0.75rem;
+      color: var(--sand-dark);
+      opacity: 0.8;
+    }
+    
+    .cross-sell-link {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--ocean-teal);
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    
+    .cross-sell-link:hover { color: var(--biz-amber); }
+    
+    /* ═══ History Panel ═══ */
+    .history-section {
+      margin-top: var(--phi-xl);
+    }
+    
+    .history-title {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--ocean-deep);
+      margin-bottom: var(--phi-sm);
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    
+    .history-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    
+    .history-item {
+      background: white;
+      border: 1px solid var(--ocean-foam);
+      border-radius: var(--phi-sm);
+      padding: var(--phi-sm) var(--phi-md);
+      cursor: pointer;
+      transition: all 0.2s;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .history-item:hover {
+      border-color: var(--biz-amber-light);
+      box-shadow: 0 2px 8px rgba(212, 135, 14, 0.08);
+    }
+    
+    .history-item-text {
+      font-size: 0.8rem;
+      color: var(--sand-dark);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 70%;
+    }
+    
+    .history-item-meta {
+      font-size: 0.68rem;
+      color: var(--sand-medium);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .history-type-badge {
+      background: var(--biz-amber-glow);
+      color: var(--biz-amber);
+      padding: 0.15rem 0.45rem;
+      border-radius: 4px;
+      font-size: 0.62rem;
+      font-weight: 600;
+    }
+    
+    /* ═══ Modals ═══ */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(38, 70, 83, 0.6);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      z-index: 200;
+      align-items: center;
+      justify-content: center;
+      padding: 1.25rem;
+    }
+    
+    .modal-overlay.active { display: flex; }
+    
+    .modal {
+      background: var(--sand-light);
+      border-radius: var(--phi-md);
+      padding: var(--phi-xl);
+      max-width: 420px;
+      width: 100%;
+      box-shadow: 0 20px 60px rgba(38, 70, 83, 0.25);
+      position: relative;
+      animation: modalIn 0.3s ease;
+    }
+    
+    @keyframes modalIn {
+      from { opacity: 0; transform: translateY(16px) scale(0.97); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+    
+    .modal-icon {
+      font-size: 2.2rem;
+      text-align: center;
+      margin-bottom: var(--phi-sm);
+    }
+    
+    .modal h2 {
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: var(--ocean-deep);
+      text-align: center;
+      margin-bottom: 0.4rem;
+    }
+    
+    .modal-subtitle {
+      text-align: center;
+      font-size: 0.88rem;
+      color: var(--sand-dark);
+      opacity: 0.75;
+      margin-bottom: var(--phi-lg);
+      line-height: 1.4;
+    }
+    
+    .modal-subtitle strong {
+      color: var(--biz-amber);
+    }
+    
+    .modal-input {
+      width: 100%;
+      padding: 0.75rem var(--phi-md);
+      background: white;
+      border: 1.5px solid var(--ocean-foam);
+      border-radius: var(--phi-sm);
+      font-family: var(--font-body);
+      font-size: 0.9rem;
+      color: var(--sand-dark);
+      outline: none;
+      transition: border-color 0.2s;
+      margin-bottom: 0.5rem;
+    }
+    
+    .modal-input:focus {
+      border-color: var(--biz-amber-light);
+    }
+    
+    .modal-input::placeholder {
+      color: var(--sand-medium);
+    }
+    
+    .modal-error {
+      display: none;
+      font-size: 0.78rem;
+      color: var(--sunset-coral);
+      text-align: center;
+      margin-bottom: 0.5rem;
+    }
+    
+    .modal-dismiss {
+      display: block;
+      margin-top: var(--phi-sm);
+      background: none;
+      border: none;
+      color: var(--sand-medium);
+      font-size: 0.78rem;
+      cursor: pointer;
+      text-align: center;
+      width: 100%;
+    }
+    
+    .modal-dismiss:hover { color: var(--sand-dark); }
+    
+    .modal-note {
+      text-align: center;
+      font-size: 0.7rem;
+      color: var(--sand-medium);
+      margin-top: var(--phi-md);
+    }
+    
+    /* ═══ Upgrade Modal ═══ */
+    .plan-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      margin-bottom: var(--phi-md);
+    }
+    
+    .plan-card {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.85rem var(--phi-md);
+      background: white;
+      border: 2px solid var(--ocean-foam);
+      border-radius: var(--phi-sm);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    
+    .plan-card:hover {
+      border-color: var(--biz-amber-light);
+    }
+    
+    .plan-card.selected {
+      border-color: var(--biz-amber);
+      background: var(--biz-amber-glow);
+    }
+    
+    .plan-card.recommended {
+      position: relative;
+    }
+    
+    .plan-card.recommended::before {
+      content: 'BEST VALUE';
+      position: absolute;
+      top: -8px;
+      right: 12px;
+      background: var(--ocean-teal);
+      color: white;
+      font-size: 0.58rem;
+      font-weight: 700;
+      padding: 0.15rem 0.5rem;
+      border-radius: 4px;
+      letter-spacing: 0.5px;
+    }
+    
+    .plan-name {
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: var(--ocean-deep);
+    }
+    
+    .plan-price-group {
+      text-align: right;
+    }
+    
+    .plan-price {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--ocean-deep);
+    }
+    
+    .plan-savings {
+      font-size: 0.68rem;
+      color: var(--ocean-teal);
+      font-weight: 600;
+    }
+    
+    .upgrade-features {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      justify-content: center;
+      padding: var(--phi-sm);
+      background: var(--biz-amber-glow);
+      border-radius: var(--phi-sm);
+      margin-bottom: var(--phi-md);
+    }
+    
+    .upgrade-features span {
+      font-size: 0.7rem;
+      color: var(--sand-dark);
+      white-space: nowrap;
+    }
+    
+    /* ═══ Footer ═══ */
+    .footer {
+      text-align: center;
+      padding: var(--phi-xl) var(--phi-md);
+      border-top: 1px solid var(--ocean-foam);
+      margin-top: var(--phi-2xl);
+    }
+    
+    .footer-brand {
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: 0.78rem;
+      color: var(--sand-dark);
+      margin-bottom: 0.3rem;
+    }
+    
+    .footer-brand a {
+      color: var(--ocean-teal);
+      text-decoration: none;
+    }
+    
+    .footer-brand a:hover { color: var(--biz-amber); }
+    
+    .footer-copy {
+      font-size: 0.68rem;
+      color: var(--sand-medium);
+    }
+    
+    .footer-apps {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: var(--phi-sm);
+    }
+    
+    .footer-apps a {
+      font-size: 0.68rem;
+      color: var(--sand-medium);
+      text-decoration: none;
+    }
+    
+    .footer-apps a:hover { color: var(--ocean-teal); }
+    
+    /* ═══ Error Toast ═══ */
+    .error-toast {
+      display: none;
+      position: fixed;
+      bottom: 1.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--sunset-coral);
+      color: white;
+      padding: 0.65rem 1.25rem;
+      border-radius: var(--phi-sm);
+      font-size: 0.82rem;
+      font-weight: 600;
+      z-index: 300;
+      box-shadow: 0 4px 16px rgba(231, 111, 81, 0.35);
+      animation: toastIn 0.3s ease;
+    }
+    
+    .error-toast.active { display: block; }
+    
+    @keyframes toastIn {
+      from { opacity: 0; transform: translateX(-50%) translateY(10px); }
+      to { opacity: 1; transform: translateX(-50%) translateY(0); }
+    }
+    
+    /* ═══ Scrollbar ═══ */
+    ::-webkit-scrollbar { width: 5px; height: 5px; }
+    ::-webkit-scrollbar-track { background: var(--sand-warm); }
+    ::-webkit-scrollbar-thumb { background: var(--sand-medium); border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: var(--biz-amber); }
+    
+    /* ═══ Responsive ═══ */
+    @media (max-width: 640px) {
+      .header { padding: 0.6rem 0.85rem; }
+      .logo-text { font-size: 0.82rem; }
+      .main { padding: 4.5rem 1rem 2rem; }
+      .hero h1 { font-size: 1.6rem; }
+      .hero p { font-size: 0.92rem; }
+      .stats-bar { gap: var(--phi-lg); }
+      .stat-value { font-size: 1.15rem; }
+      .type-grid { grid-template-columns: repeat(3, 1fr); }
+      .input-section { padding: var(--phi-md); }
+      .output-body { padding: var(--phi-md); font-size: 0.82rem; }
+      .cross-sell { flex-direction: column; text-align: center; }
+      .usage-bar { display: none; }
+      .modal { padding: var(--phi-lg); }
+    }
+    
+    @media (max-width: 380px) {
+      .type-grid { grid-template-columns: repeat(2, 1fr); }
+    }
   </style>
 </head>
 <body>
-  <div class="container">
-    <div class="logo">dubltap<span>.</span>io</div>
-    <div class="icon">💼</div>
-    <h1><span>Pro Business Development</span></h1>
-    <p class="tagline">AI-powered sales strategy generator. Close more deals with personalized pitch decks and competitive positioning. Coming soon.</p>
-    <form class="email-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-      <input type="email" name="email" placeholder="your@email.com" required>
-      <input type="hidden" name="source" value="bizdev.dubltap.io">
-      <button type="submit">Notify Me</button>
-    </form>
-    <p class="note">Be first to know when we launch. No spam.</p>
-    <a href="https://dubltap.io" class="back-link">← Back to all apps</a>
+
+<!-- Background -->
+<div class="bg-ambient"></div>
+
+<!-- ═══ Header ═══ -->
+<header class="header">
+  <a href="https://dubltap.io" class="logo-group" target="_blank">
+    <div class="logo-icon">🎯</div>
+    <div>
+      <div class="logo-text">Pro Business Development</div>
+      <div class="logo-sub">dubltap.io</div>
+    </div>
+  </a>
+  <div class="header-right">
+    <div class="usage-badge" id="usageBadge" style="display:none;">
+      <div class="usage-bar"><div class="usage-fill" id="usageFill"></div></div>
+      <span id="usageText">3 left</span>
+    </div>
+    <button class="btn btn-biz btn-sm" id="headerCta" onclick="handleHeaderCta()">
+      Get Started Free
+    </button>
   </div>
+</header>
+
+<!-- ═══ Main Content ═══ -->
+<main class="main">
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-badge">⚡ AI-Powered Revenue Engine</div>
+    <h1>Close More Deals.<br><span>In Less Time.</span></h1>
+    <p>Sales scripts, negotiation tactics, marketing strategy, and revenue playbooks — generated in seconds, not hours.</p>
+    
+    <div class="stats-bar">
+      <div class="stat"><div class="stat-value">40%</div><div class="stat-label">Faster Cycles</div></div>
+      <div class="stat"><div class="stat-value">3×</div><div class="stat-label">Pipeline</div></div>
+      <div class="stat"><div class="stat-value">60%</div><div class="stat-label">Less Prep</div></div>
+      <div class="stat"><div class="stat-value">25%</div><div class="stat-label">Higher Close</div></div>
+    </div>
+  </section>
+
+  <!-- Type Selector -->
+  <div class="type-grid" id="typeGrid">
+    <div class="type-card active" data-type="sales" onclick="selectType('sales')">
+      <div class="type-icon">🎯</div>
+      <div class="type-name">Sales Strategy</div>
+    </div>
+    <div class="type-card" data-type="negotiation" onclick="selectType('negotiation')">
+      <div class="type-icon">⚖️</div>
+      <div class="type-name">Negotiation</div>
+    </div>
+    <div class="type-card" data-type="marketing" onclick="selectType('marketing')">
+      <div class="type-icon">📈</div>
+      <div class="type-name">Marketing</div>
+    </div>
+    <div class="type-card" data-type="copy" onclick="selectType('copy')">
+      <div class="type-icon">✍️</div>
+      <div class="type-name">Copy</div>
+    </div>
+    <div class="type-card" data-type="seo" onclick="selectType('seo')">
+      <div class="type-icon">🔍</div>
+      <div class="type-name">SEO</div>
+    </div>
+    <div class="type-card" data-type="revops" onclick="selectType('revops')">
+      <div class="type-icon">⚙️</div>
+      <div class="type-name">RevOps</div>
+    </div>
+  </div>
+
+  <!-- Input Area -->
+  <div class="input-section">
+    <div class="input-header">
+      <span class="input-label" id="inputLabel">🎯 Sales Strategy Prompt</span>
+      <button class="input-example" onclick="useExample()">Use Example →</button>
+    </div>
+    <textarea class="prompt-textarea" id="promptInput" placeholder="Describe your business challenge..."></textarea>
+    <button class="generate-btn" id="generateBtn" onclick="handleGenerate()">
+      Generate Sales Strategy →
+    </button>
+  </div>
+
+  <!-- Loading State -->
+  <div class="loading-state" id="loadingState">
+    <div class="spinner"></div>
+    <div class="loading-text" id="loadingText">Generating your sales strategy...</div>
+    <div class="loading-sub">Analyzing context • Building framework • Optimizing approach</div>
+  </div>
+
+  <!-- Output Area -->
+  <div class="output-section" id="outputSection">
+    <div class="output-header">
+      <span class="output-label" id="outputLabel">✨ Generated Sales Strategy</span>
+      <button class="copy-btn" id="copyBtn" onclick="copyOutput()">📋 Copy</button>
+    </div>
+    <div class="output-body" id="outputBody"></div>
+  </div>
+
+  <!-- Cross-Sell Banner -->
+  <div class="cross-sell" id="crossSell">
+    <div class="cross-sell-icon" id="crossSellIcon">📊</div>
+    <div class="cross-sell-text">
+      <div class="cross-sell-title" id="crossSellTitle">Know your competition first</div>
+      <div class="cross-sell-desc" id="crossSellDesc">Get competitive intelligence before your next pitch with Market Maven.</div>
+    </div>
+    <a class="cross-sell-link" id="crossSellLink" href="https://maven.dubltap.io" target="_blank">Try Market Maven →</a>
+  </div>
+
+  <!-- History -->
+  <div class="history-section" id="historySection" style="display:none;">
+    <div class="history-title">📂 Recent Generations</div>
+    <div class="history-list" id="historyList"></div>
+  </div>
+
+</main>
+
+<!-- ═══ Footer ═══ -->
+<footer class="footer">
+  <div class="footer-brand">
+    <a href="https://dubltap.io">dubltap.io</a> — AI that actually does stuff.
+  </div>
+  <div class="footer-copy">© 2026 dubltap.io — Pro Business Development. Ship fast. Protect margin.</div>
+  <div class="footer-apps">
+    <a href="https://maven.dubltap.io">Market Maven</a>
+    <a href="https://cliff.dubltap.io">CLIFF NOTEZ</a>
+    <a href="https://hustle.dubltap.io">Side Hustle Copilot</a>
+    <a href="https://fork.dubltap.io">Bad Mutha Forker</a>
+    <a href="https://aesthetic.dubltap.io">Aesthetic AI</a>
+    <a href="https://vibe.dubltap.io">VibeCurate</a>
+    <a href="https://mind.dubltap.io">Mind Expander</a>
+  </div>
+</footer>
+
+<!-- ═══ Email Capture Modal ═══ -->
+<div class="modal-overlay" id="emailModal">
+  <div class="modal">
+    <div class="modal-icon">🚀</div>
+    <h2>Unlock Pro BizDev</h2>
+    <div class="modal-subtitle">
+      Enter your email to get <strong>3 free AI-powered generations</strong>.<br>
+      Sales scripts, negotiations, marketing — all included.
+    </div>
+    <input class="modal-input" type="email" id="emailInput" placeholder="you@company.com" onkeydown="if(event.key==='Enter')handleEmailSubmit()">
+    <div class="modal-error" id="emailError">Please enter a valid email address</div>
+    <button class="btn btn-biz btn-lg" style="width:100%" onclick="handleEmailSubmit()">Get Free Access →</button>
+    <button class="modal-dismiss" onclick="closeEmailModal()">Maybe later</button>
+    <div class="modal-note">No spam. No credit card. Just business firepower. 🔥</div>
+  </div>
+</div>
+
+<!-- ═══ Upgrade Modal ═══ -->
+<div class="modal-overlay" id="upgradeModal">
+  <div class="modal">
+    <div class="modal-icon">⭐</div>
+    <h2>Upgrade to Pro</h2>
+    <div class="modal-subtitle">
+      You've used your free generations. Unlock <strong>unlimited access</strong> to all 6 capabilities.
+    </div>
+    
+    <div class="plan-cards">
+      <div class="plan-card recommended selected" id="annualCard" onclick="selectPlan('annual')">
+        <div>
+          <div class="plan-name">Annual</div>
+        </div>
+        <div class="plan-price-group">
+          <div class="plan-price">$199/yr</div>
+          <div class="plan-savings">Save 31% ($89)</div>
+        </div>
+      </div>
+      <div class="plan-card" id="monthlyCard" onclick="selectPlan('monthly')">
+        <div>
+          <div class="plan-name">Monthly</div>
+        </div>
+        <div class="plan-price-group">
+          <div class="plan-price">$24/mo</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="upgrade-features">
+      <span>✓ Unlimited generations</span>
+      <span>✓ All 6 capabilities</span>
+      <span>✓ Priority speed</span>
+      <span>✓ Export &amp; share</span>
+    </div>
+    
+    <button class="btn btn-biz btn-lg" style="width:100%" onclick="handleUpgrade()" id="upgradeSubmit">Go Pro — Unlimited Access</button>
+    <button class="modal-dismiss" onclick="closeUpgradeModal()">Maybe later</button>
+  </div>
+</div>
+
+<!-- ═══ Error Toast ═══ -->
+<div class="error-toast" id="errorToast"></div>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     PRO BUSINESS DEVELOPMENT — Application Logic
+     dubltap.io Monetization Hub
+     ═══════════════════════════════════════════════════════════════ -->
+<script>
+
+  const API_BASE = 'https://api.dubltap.io';
+  const FREE_LIMIT = 3;
+  const EMAIL_GATE_AFTER = 1; // Require email before first generation
+
+  // ═══ Stripe Price IDs (LIVE mode) ═══
+  // Stripe Price IDs (LIVE mode) — Pro Business Development Pro
+  // Product: "Pro Business Development Pro" — $24/mo, $199/yr
+  const STRIPE_PRICES = {
+    monthly: 'price_1SwsqVBkYqg7J4R7ysT0vEs3',
+    annual: 'price_1SwsrUBkYqg7J4R72XkurIdW'
+  };
+
+  // ═══ Generation Types ═══
+  const TYPES = {
+    sales:       { icon: '🎯', name: 'Sales Strategy',  action: 'sales-strategy',     desc: 'Deal strategy, discovery questions, objection handling' },
+    negotiation: { icon: '⚖️', name: 'Negotiation',     action: 'negotiation-tactics', desc: 'BATNA/ZOPA analysis, give/gets, tactical frameworks' },
+    marketing:   { icon: '📈', name: 'Marketing',       action: 'marketing-strategy',  desc: 'Positioning, campaign planning, competitive messaging' },
+    copy:        { icon: '✍️', name: 'Copy',            action: 'copy-generation',     desc: 'Cold emails, landing pages, sales scripts, ad copy' },
+    seo:         { icon: '🔍', name: 'SEO',             action: 'seo-strategy',        desc: 'Keyword clusters, content briefs, topic authority' },
+    revops:      { icon: '⚙️', name: 'RevOps',          action: 'revops-playbook',     desc: 'KPI dashboards, sales playbooks, pipeline frameworks' }
+  };
+
+  // ═══ Sample Prompts ═══
+  const EXAMPLES = {
+    sales: "I'm selling a $50K SaaS platform to enterprise IT directors. Help me create discovery questions and an objection handler for 'we're happy with our current solution.'",
+    negotiation: "We're negotiating a 2-year contract with a vendor asking $200K/year. Our budget is $150K. Create a BATNA analysis and give/get strategy.",
+    marketing: "I run a B2B fintech startup. Help me create positioning against established players and a campaign strategy for Q1.",
+    copy: "Write a cold email sequence (3 emails) for selling marketing automation to CMOs at mid-market companies.",
+    seo: "Create a keyword cluster strategy for a project management software targeting remote teams.",
+    revops: "Build a sales KPI dashboard framework for a 10-person SDR team with monthly quotas of $500K."
+  };
+
+  // ═══ Cross-sell rules ═══
+  const CROSS_SELLS = {
+    sales:       { icon: '📊', app: 'Market Maven', desc: 'Get competitive intel before your next pitch.', url: 'https://maven.dubltap.io' },
+    negotiation: { icon: '📄', app: 'CLIFF NOTEZ',  desc: 'Deep-dive the contract details with AI analysis.', url: 'https://cliff.dubltap.io' },
+    marketing:   { icon: '📊', app: 'Market Maven', desc: 'Analyze competitors before building campaigns.', url: 'https://maven.dubltap.io' },
+    copy:        { icon: '🎨', app: 'Aesthetic AI',  desc: 'Design stunning visuals for your campaigns.', url: 'https://aesthetic.dubltap.io' },
+    seo:         { icon: '📄', app: 'CLIFF NOTEZ',  desc: 'Research industry reports for authority content.', url: 'https://cliff.dubltap.io' },
+    revops:      { icon: '📊', app: 'Market Maven', desc: 'Add competitive benchmarks to your dashboards.', url: 'https://maven.dubltap.io' }
+  };
+
+  // ═══ Loading messages ═══
+  const LOADING_MSGS = {
+    sales:       'Crafting your sales strategy...',
+    negotiation: 'Building negotiation framework...',
+    marketing:   'Developing marketing strategy...',
+    copy:        'Writing your copy...',
+    seo:         'Researching keywords & strategy...',
+    revops:      'Building revenue operations playbook...'
+  };
+
+  // ═══ State ═══
+  let isRegistered = false;
+  let isPro = false;
+  let generationsUsed = 0;
+  let selectedPlan = 'annual';
+  let userEmail = '';
+  let activeType = 'sales';
+  let history = [];
+  let currentOutput = '';
+  let isGenerating = false;
+
+  // ═══ Initialize ═══
+  function init() {
+    loadState();
+    updateUI();
+    checkUpgradeSuccess();
+  }
+
+  function loadState() {
+    try {
+      const saved = localStorage.getItem('probizdev_state');
+      if (saved) {
+        const s = JSON.parse(saved);
+        isRegistered = s.isRegistered || false;
+        isPro = s.isPro || false;
+        generationsUsed = s.generationsUsed || 0;
+        userEmail = s.userEmail || '';
+        history = s.history || [];
+      }
+    } catch (e) {
+      console.log('Fresh session');
+    }
+  }
+
+  function saveState() {
+    try {
+      localStorage.setItem('probizdev_state', JSON.stringify({
+        isRegistered, isPro, generationsUsed, userEmail, history
+      }));
+    } catch (e) {}
+  }
+
+  // ═══ UI Updates ═══
+  function updateUI() {
+    const badge = document.getElementById('usageBadge');
+    const fill = document.getElementById('usageFill');
+    const text = document.getElementById('usageText');
+    const cta = document.getElementById('headerCta');
+
+    if (isPro) {
+      badge.style.display = 'none';
+      cta.textContent = '⭐ Pro Member';
+      cta.onclick = null;
+      cta.style.cursor = 'default';
+    } else if (isRegistered) {
+      badge.style.display = 'flex';
+      const remaining = Math.max(0, FREE_LIMIT - generationsUsed);
+      const pct = Math.min((generationsUsed / FREE_LIMIT) * 100, 100);
+      fill.style.width = pct + '%';
+      fill.className = 'usage-fill' + (remaining <= 1 ? ' low' : '');
+      text.textContent = remaining + ' left';
+      cta.textContent = 'Upgrade to Pro';
+      cta.onclick = showUpgradeModal;
+    } else {
+      badge.style.display = 'none';
+      cta.textContent = 'Get Started Free';
+      cta.onclick = showEmailModal;
+    }
+
+    // Render history
+    const historySection = document.getElementById('historySection');
+    const historyList = document.getElementById('historyList');
+    if (history.length > 0) {
+      historySection.style.display = 'block';
+      historyList.innerHTML = history.slice(0, 8).map((item, i) => `
+        <div class="history-item" onclick="replayHistory(${i})">
+          <div class="history-item-text">${escapeHtml(item.prompt.substring(0, 60))}${item.prompt.length > 60 ? '...' : ''}</div>
+          <div class="history-item-meta">
+            <span class="history-type-badge">${TYPES[item.type]?.icon || '🎯'} ${TYPES[item.type]?.name || 'General'}</span>
+          </div>
+        </div>
+      `).join('');
+    } else {
+      historySection.style.display = 'none';
+    }
+  }
+
+  // ═══ Type Selection ═══
+  function selectType(type) {
+    activeType = type;
+    const info = TYPES[type];
+
+    // Update cards
+    document.querySelectorAll('.type-card').forEach(c => {
+      c.classList.toggle('active', c.dataset.type === type);
+    });
+
+    // Update input label
+    document.getElementById('inputLabel').textContent = `${info.icon} ${info.name} Prompt`;
+
+    // Update generate button
+    document.getElementById('generateBtn').innerHTML = `Generate ${info.name} →`;
+
+    // Update placeholder
+    document.getElementById('promptInput').placeholder = `Describe your ${info.name.toLowerCase()} challenge...`;
+
+    // Clear output
+    document.getElementById('outputSection').classList.remove('active');
+    document.getElementById('crossSell').classList.remove('active');
+  }
+
+  function useExample() {
+    document.getElementById('promptInput').value = EXAMPLES[activeType] || EXAMPLES.sales;
+    document.getElementById('promptInput').focus();
+  }
+
+  // ═══ Generation ═══
+  async function handleGenerate() {
+    if (isGenerating) return;
+
+    const prompt = document.getElementById('promptInput').value.trim();
+    if (!prompt) {
+      showToast('Please describe your business challenge first.');
+      return;
+    }
+
+    // Email gate
+    if (!isRegistered && generationsUsed >= EMAIL_GATE_AFTER) {
+      showEmailModal();
+      return;
+    }
+
+    // Free limit
+    if (!isPro && isRegistered && generationsUsed >= FREE_LIMIT) {
+      showUpgradeModal();
+      return;
+    }
+
+    isGenerating = true;
+    const info = TYPES[activeType];
+    document.getElementById('generateBtn').disabled = true;
+    document.getElementById('generateBtn').innerHTML = '<span class="spinner" style="width:18px;height:18px;border-width:2px;margin:0;"></span> Generating...';
+    document.getElementById('loadingState').classList.add('active');
+    document.getElementById('loadingText').textContent = LOADING_MSGS[activeType];
+    document.getElementById('outputSection').classList.remove('active');
+    document.getElementById('crossSell').classList.remove('active');
+
+    try {
+      const response = await fetch(`${API_BASE}/api/ai-query`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          app: 'pro-bizdev',
+          action: info.action,
+          content: prompt,
+          email: userEmail || 'anonymous'
+        })
+      });
+
+      if (!response.ok) throw new Error('API error: ' + response.status);
+
+      const data = await response.json();
+      let resultText = '';
+
+      if (data.result) {
+        resultText = typeof data.result === 'string' ? data.result : JSON.stringify(data.result, null, 2);
+      } else if (data.content) {
+        resultText = typeof data.content === 'string' ? data.content : JSON.stringify(data.content, null, 2);
+      } else {
+        resultText = JSON.stringify(data, null, 2);
+      }
+
+      // Clean up any markdown code fences wrapping
+      resultText = resultText.replace(/^```(?:markdown|md|json)?\n?/i, '').replace(/\n?```$/i, '').trim();
+
+      currentOutput = resultText;
+
+      // Track usage
+      generationsUsed++;
+
+      // Save to history
+      history.unshift({
+        type: activeType,
+        prompt: prompt,
+        result: resultText,
+        date: new Date().toISOString()
+      });
+      if (history.length > 20) history = history.slice(0, 20);
+
+      saveState();
+      displayOutput(resultText, info);
+      showCrossSell();
+      updateUI();
+
+      // Prompt upgrade if nearing limit
+      if (!isPro && generationsUsed >= FREE_LIMIT) {
+        setTimeout(showUpgradeModal, 1500);
+      }
+
+    } catch (error) {
+      console.error('Generation error:', error);
+      showToast('Generation failed — please try again.');
+    }
+
+    isGenerating = false;
+    document.getElementById('generateBtn').disabled = false;
+    document.getElementById('generateBtn').innerHTML = `Generate ${info.name} →`;
+    document.getElementById('loadingState').classList.remove('active');
+  }
+
+  // ═══ Display Output ═══
+  function displayOutput(text, info) {
+    const section = document.getElementById('outputSection');
+    const body = document.getElementById('outputBody');
+    const label = document.getElementById('outputLabel');
+
+    label.innerHTML = `✨ Generated ${info.name}`;
+    body.innerHTML = renderMarkdown(text);
+    section.classList.add('active');
+    section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+    // Reset copy button
+    const copyBtn = document.getElementById('copyBtn');
+    copyBtn.textContent = '📋 Copy';
+    copyBtn.classList.remove('copied');
+  }
+
+  // ═══ Simple Markdown Renderer ═══
+  function renderMarkdown(md) {
+    if (!md) return '';
+    let html = md;
+
+    // Code blocks
+    html = html.replace(/```(\w*)\n([\s\S]*?)```/g, (_, lang, code) => {
+      return `<pre><code>${escapeHtml(code.trim())}</code></pre>`;
+    });
+
+    // Tables
+    html = html.replace(/^(\|.+\|)\n(\|[-:\s|]+\|)\n((?:\|.+\|\n?)*)/gm, (match, header, separator, body) => {
+      const headers = header.split('|').filter(c => c.trim()).map(c => `<th>${c.trim()}</th>`).join('');
+      const rows = body.trim().split('\n').map(row => {
+        const cells = row.split('|').filter(c => c.trim()).map(c => `<td>${c.trim()}</td>`).join('');
+        return `<tr>${cells}</tr>`;
+      }).join('');
+      return `<table><thead><tr>${headers}</tr></thead><tbody>${rows}</tbody></table>`;
+    });
+
+    // Headers
+    html = html.replace(/^#### (.+)$/gm, '<h4>$1</h4>');
+    html = html.replace(/^### (.+)$/gm, '<h3>$1</h3>');
+    html = html.replace(/^## (.+)$/gm, '<h2>$1</h2>');
+    html = html.replace(/^# (.+)$/gm, '<h2>$1</h2>');
+
+    // Horizontal rules
+    html = html.replace(/^---+$/gm, '<hr>');
+
+    // Bold and italic
+    html = html.replace(/\*\*\*(.+?)\*\*\*/g, '<strong><em>$1</em></strong>');
+    html = html.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+    html = html.replace(/\*(.+?)\*/g, '<em>$1</em>');
+
+    // Inline code
+    html = html.replace(/`([^`]+)`/g, '<code>$1</code>');
+
+    // Blockquotes
+    html = html.replace(/^> (.+)$/gm, '<blockquote>$1</blockquote>');
+
+    // Unordered lists
+    html = html.replace(/^[\-\*] (.+)$/gm, '<li>$1</li>');
+    html = html.replace(/(<li>.*<\/li>\n?)+/g, '<ul>$&</ul>');
+
+    // Ordered lists
+    html = html.replace(/^\d+\. (.+)$/gm, '<li>$1</li>');
+
+    // Links
+    html = html.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank">$1</a>');
+
+    // Paragraphs (simple: double newline = paragraph break)
+    html = html.replace(/\n\n/g, '</p><p>');
+    html = html.replace(/\n/g, '<br>');
+
+    // Wrap in paragraph if not starting with block element
+    if (!html.startsWith('<h') && !html.startsWith('<ul') && !html.startsWith('<ol') && !html.startsWith('<table') && !html.startsWith('<pre') && !html.startsWith('<blockquote')) {
+      html = '<p>' + html + '</p>';
+    }
+
+    // Clean up empty tags
+    html = html.replace(/<p><\/p>/g, '');
+    html = html.replace(/<p><(h[2-4]|ul|ol|table|pre|hr|blockquote)/g, '<$1');
+    html = html.replace(/<\/(h[2-4]|ul|ol|table|pre|hr|blockquote)><\/p>/g, '</$1>');
+
+    return html;
+  }
+
+  // ═══ Copy Output ═══
+  function copyOutput() {
+    if (!currentOutput) return;
+    navigator.clipboard.writeText(currentOutput).then(() => {
+      const btn = document.getElementById('copyBtn');
+      btn.textContent = '✓ Copied!';
+      btn.classList.add('copied');
+      setTimeout(() => {
+        btn.textContent = '📋 Copy';
+        btn.classList.remove('copied');
+      }, 2000);
+    });
+  }
+
+  // ═══ Cross-Sell ═══
+  function showCrossSell() {
+    const cs = CROSS_SELLS[activeType];
+    if (!cs) return;
+    document.getElementById('crossSellIcon').textContent = cs.icon;
+    document.getElementById('crossSellTitle').textContent = `Level up with ${cs.app}`;
+    document.getElementById('crossSellDesc').textContent = cs.desc;
+    document.getElementById('crossSellLink').href = cs.url;
+    document.getElementById('crossSellLink').textContent = `Try ${cs.app} →`;
+    document.getElementById('crossSell').classList.add('active');
+  }
+
+  // ═══ History Replay ═══
+  function replayHistory(index) {
+    const item = history[index];
+    if (!item) return;
+    selectType(item.type);
+    document.getElementById('promptInput').value = item.prompt;
+    if (item.result) {
+      currentOutput = item.result;
+      displayOutput(item.result, TYPES[item.type]);
+    }
+  }
+
+  // ═══ Email Capture ═══
+  function showEmailModal() {
+    document.getElementById('emailModal').classList.add('active');
+    document.getElementById('emailError').style.display = 'none';
+    setTimeout(() => document.getElementById('emailInput').focus(), 100);
+  }
+
+  function closeEmailModal() {
+    document.getElementById('emailModal').classList.remove('active');
+  }
+
+  async function handleEmailSubmit() {
+    const email = document.getElementById('emailInput').value.trim();
+    if (!email || !email.includes('@') || !email.includes('.')) {
+      document.getElementById('emailError').style.display = 'block';
+      return;
+    }
+
+    document.getElementById('emailError').style.display = 'none';
+    userEmail = email;
+    isRegistered = true;
+    saveState();
+    updateUI();
+    closeEmailModal();
+
+    // Send to backend
+    try {
+      await fetch(`${API_BASE}/api/email-capture`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          email,
+          source: 'pro-bizdev',
+          tags: ['pro-bizdev', 'monetization-hub']
+        })
+      });
+    } catch (e) {
+      console.log('Email capture sent');
+    }
+
+    // Auto-generate if they had a prompt ready
+    const prompt = document.getElementById('promptInput').value.trim();
+    if (prompt) handleGenerate();
+  }
+
+  // ═══ Upgrade Flow ═══
+  function showUpgradeModal() {
+    document.getElementById('upgradeModal').classList.add('active');
+    selectPlan('annual');
+  }
+
+  function closeUpgradeModal() {
+    document.getElementById('upgradeModal').classList.remove('active');
+  }
+
+  function selectPlan(plan) {
+    selectedPlan = plan;
+    document.getElementById('annualCard').classList.toggle('selected', plan === 'annual');
+    document.getElementById('monthlyCard').classList.toggle('selected', plan === 'monthly');
+  }
+
+  async function handleUpgrade() {
+    const priceId = STRIPE_PRICES[selectedPlan];
+
+    try {
+      const response = await fetch(`${API_BASE}/create-checkout`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          priceId,
+          email: userEmail || undefined,
+          successUrl: window.location.origin + '/?upgraded=true',
+          cancelUrl: window.location.origin + '/'
+        })
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+        if (data.url) {
+          window.location.href = data.url;
+        }
+      } else {
+        showToast('Unable to start checkout. Please try again.');
+      }
+    } catch (error) {
+      console.error('Checkout error:', error);
+      showToast('Unable to connect to payment system. Please try again.');
+    }
+  }
+
+  // ═══ Check for upgrade success ═══
+  function checkUpgradeSuccess() {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('upgraded') === 'true') {
+      isPro = true;
+      saveState();
+      updateUI();
+      window.history.replaceState({}, '', window.location.pathname);
+      showToastSuccess('🎉 Welcome to Pro! Unlimited generations unlocked.');
+    }
+  }
+
+  // ═══ Header CTA ═══
+  function handleHeaderCta() {
+    if (isPro) return;
+    if (isRegistered) {
+      showUpgradeModal();
+    } else {
+      showEmailModal();
+    }
+  }
+
+  // ═══ Toast Messages ═══
+  function showToast(msg) {
+    const toast = document.getElementById('errorToast');
+    toast.textContent = msg;
+    toast.classList.add('active');
+    toast.style.background = 'var(--sunset-coral)';
+    setTimeout(() => toast.classList.remove('active'), 3500);
+  }
+
+  function showToastSuccess(msg) {
+    const toast = document.getElementById('errorToast');
+    toast.textContent = msg;
+    toast.classList.add('active');
+    toast.style.background = 'var(--ocean-teal)';
+    setTimeout(() => toast.classList.remove('active'), 4000);
+  }
+
+  // ═══ Utilities ═══
+  function escapeHtml(str) {
+    const div = document.createElement('div');
+    div.textContent = str;
+    return div.innerHTML;
+  }
+
+  // ═══ Boot ═══
+  document.addEventListener('DOMContentLoaded', init);
+
+</script>
+
 </body>
 </html>
