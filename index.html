@@ -7,7 +7,7 @@
   <meta name="description" content="Sales scripts, negotiation tactics, marketing strategy, and revenue playbooks in seconds. AI that closes deals. Free to start.">
   
   <!-- Open Graph -->
-  <meta property="og:title" content="Pro Business Development | AI-Powered Revenue Engine">
+  <meta property="og:title" content="Pro Business Developmenht | AI-Powered Revenue Engine">
   <meta property="og:description" content="Sales scripts, negotiation tactics, marketing strategy, and revenue playbooks in seconds. Free to start.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://bizdev.dubltap.io">
@@ -901,7 +901,7 @@
     .plan-card {
       display: flex;
       justify-content: space-between;
-      align-items: center;
+      align-items: center;h
       padding: 0.85rem var(--phi-md);
       background: white;
       border: 2px solid var(--ocean-foam);
@@ -1726,7 +1726,7 @@
     const priceId = STRIPE_PRICES[selectedPlan];
 
     try {
-      const response = await fetch(`${API_BASE}/create-checkout`, {
+      const response = await fetch(`${API_BASE}/api/create-checkout`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
